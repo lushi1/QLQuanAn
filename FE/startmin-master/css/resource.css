@@ -1,0 +1,177 @@
+.add-new {
+  float: right;
+  margin-bottom: 10px;
+}
+
+table.table {
+  table-layout: fixed;
+}
+
+table.table tr th,
+table.table tr td {
+  border-color: #e9e9e9;
+}
+
+table.table th i {
+  font-size: 13px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+table.table th:last-child {
+  width: 100px;
+}
+
+table.table td a {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  min-width: 24px;
+}
+
+table.table td i {
+  font-size: 19px;
+}
+
+table.table td a.add i {
+  font-size: 24px;
+  margin-right: -1px;
+  position: relative;
+  top: 3px;
+}
+
+table.table .form-control {
+  height: 32px;
+  line-height: 32px;
+  box-shadow: none;
+  border-radius: 2px;
+}
+
+table.table .form-control.error {
+  border-color: #f50000;
+}
+
+table.table td .add {
+  display: none;
+}
+
+.modal-dialog-add-resource {
+  transform: translate(0, -50%);
+  top: 15%;
+  margin: 0 auto;
+}
+
+.close-resource-add {
+  display: inline-block;
+}
+
+.modal-title {
+  display: inline-block;
+}
+
+.paging-resources {
+  float: right;
+}
+
+.search-resource {
+  margin-left: 16px;
+  width: 50%;
+}
+
+.row-title-add-resource {
+    height: 70px;
+    margin-top: 8px;
+}
+.row-title-add-resource .img-food{
+  margin-right: 8px;
+  float: left;
+}
+.row-title-add-resource .img-food img{
+  height: 70px;
+}
+
+.title-food-name{
+  color: crimson;
+  font-size: 2em;
+
+}
+.unit-wrap #unit-resource, #unit-resource{
+  height: 34px;
+  width: 70%;
+}
+
+.row-detail-res{
+  margin-top: 16px;
+}
+
+.my-custom-scrollbar {
+
+height: 200px;
+overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
+}
+
+
+.row-selected{
+  background: none repeat scroll 0 0 #FFCF8B;
+  color: #000000;
+}
+
+.fixedHeader{
+  display: block;
+}
+.fixedHeader tr {
+    position: relative;
+}
+
+.column-1-detab{
+  width: 10%;
+}
+
+.table-detail-food .row-detail{
+  width: 100%;
+  display: flex;
+}
+
+.column-2-detab{
+  width: 50%;
+}
+
+.column-3-detab{
+  width: 40%;
+}
+
+.img-add-food-detail{
+  top: 0em;
+  position: absolute;
+  z-index: 5;
+  right: 0.2em;
+}
+
+#img-vegetables{
+  position: absolute;
+  z-index: 5;
+  bottom: 20px;
+  margin-left: 16px;
+  height: 100px;
+}
+
+@media only screen and (max-width: 770px) {
+  #img-vegetables{
+    display: none;
+  }
+}
+
+
+#btnAddResource{
+  float: right;
+  margin-right: 5em;
+  margin-top: 1em;
+}
+
+#btn-delete-resource{
+  float: right;
+    margin-right: 5em;
+}

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Startmin - Bootstrap Admin Theme</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- MetisMenu CSS -->
+  <link href="../css/metisMenu.min.css" rel="stylesheet">
+
+  <!-- DataTables CSS -->
+  <link href="../css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+
+  <!-- DataTables Responsive CSS -->
+  <link href="../css/dataTables/dataTables.responsive.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../css/startmin.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+
+  <script data-require="angularjs@1.6.2" data-semver="1.6.2" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+
+  <script src="../js/app.js"></script>
+
+  <script src="../js/dirPagination.js"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+  <!--code cua lam-->
+  <link rel="stylesheet" href="../css/resource.css">
+
+  <link rel="stylesheet" href="../css/jquery-editable-select.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script data-require="ui-bootstrap@*" data-semver="0.12.1" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body ng-app="myApp" ng-controller="foodController">
+
+  <div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Startmin</a>
+      </div>
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <ul class="nav navbar-nav navbar-left navbar-top-links">
+        <li><a href="#"><i class="fa fa-home fa-fw"></i> Website</a></li>
+      </ul>
+
+      <ul class="nav navbar-right navbar-top-links">
+        <li class="dropdown navbar-inverse">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-bell fa-fw"></i> <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu dropdown-alerts">
+            <li>
+              <a href="#">
+                <div>
+                  <i class="fa fa-comment fa-fw"></i> New Comment
+                  <span class="pull-right text-muted small">4 minutes ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                  <span class="pull-right text-muted small">12 minutes ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <i class="fa fa-envelope fa-fw"></i> Message Sent
+                  <span class="pull-right text-muted small">4 minutes ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <i class="fa fa-tasks fa-fw"></i> New Task
+                  <span class="pull-right text-muted small">4 minutes ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                  <span class="pull-right text-muted small">4 minutes ago</span>
+                </div>
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a class="text-center" href="#">
+                <strong>See All Alerts</strong>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-user fa-fw"></i> secondtruth <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu dropdown-user">
+            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+            </li>
+            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- /.navbar-top-links -->
+
+      <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+          <ul class="nav" id="side-menu">
+            <li class="sidebar-search">
+              <div class="input-group custom-search-form">
+                <input type="text" class="form-control" placeholder="Search...">
+                <span class="input-group-btn">
+                  <button class="btn btn-primary" type="button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </span>
+              </div>
+              <!-- /input-group -->
+            </li>
+            <li>
+                <a href="blank.html"><i class="fa fa-dashboard fa-fw"></i> Đặt bàn</a>
+            </li>
+            <li>
+                <a href="tables.html"><i class="fa fa-table fa-fw"></i> Quản lý thực đơn</a>
+            </li>
+            <li>
+                <a href="resourceManager.html"><i class="fa fa-table fa-fw"></i> Quản lý nguyên liệu</a>
+            </li>
+            <li>
+                <a href="categoryManager.html"><i class="fa fa-table fa-fw"></i> Quản lý loại món ăn</a>
+            </li>
+            <li>
+                <a href="statistic.html"><i class="fa fa-bar-chart-o fa-fw"></i> Thống kê</a>
+            </li>
+              </ul>
+              <!-- /.nav-second-level -->
+            </li>
+          </ul>
+        </div>
+        <!-- /.sidebar-collapse -->
+      </div>
+      <!-- /.navbar-static-side -->
+    </nav>
+
+    <div id="page-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="table-wrapper">
+              <div class="table-title">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h2>Manage <b>Foods</b></h2>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="#addFood" ng-click="addFood()" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Food</span></a>
+                    <a href="#" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
+                  </div>
+                </div>
+              </div>
+
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+
+                    <th>
+                      <span class="custom-checkbox">
+                        <input type="checkbox" id="selectAll">
+                        <label for="selectAll"></label>
+                      </span>
+                    </th>
+
+                    <th>Picture</th>
+                    <th>Food Code</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th></th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr dir-paginate="food in foods | itemsPerPage: itemsPerPage">
+                    <td>
+                      <span class="custom-checkbox">
+                        <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                        <label for="checkbox1"></label>
+                      </span>
+                    </td>
+                    <td><img ng-src="../images/{{food.foodPicture}}" onerror="if (this.src != '../images/food.png') this.src = '../images/food.png';" alt="{{ food.foodPicture }}" width="100" height="100" /></td>
+                    <td>{{ food.foodCode }}</td>
+                    <td>{{ food.foodName }}</td>
+                    <td>{{ food.foodPrice | currency:"" : 0}} đ</td>
+                    <td>{{ food.categoryEntity.categoryName }}</td>
+                    <td>{{ food.foodStatus }}</td>
+                    <td>
+                      <a href="#" ng-click="addResourceFood(food)" data-toggle="modal" data-target="#addResource"><i class="material-icons" data-toggle="tool" title="Add resource">restaurant_menu</i></a>
+                      <a href="#" ng-click="editFood(food)" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                      <a href="#" confirmed-click="deleteFood(food)" ng-confirm-click="Would you like to delete {{food.foodName}}?" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+              <div class="clearfix">
+                <div class="hint-text">Showing
+                  <b>
+                    <select ng-change="setItemsPerPage(viewby)" ng-model="viewby">
+                      <option>5</option>
+                      <option>10</option>
+                    </select>
+                  </b> entries
+                </div>
+                <dir-pagination-controls max-size="10" direction-links="true" boundary-links="true">
+                </dir-pagination-controls>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+
+  </div>
+
+  <!-- add Modal HTML -->
+
+  <div id="addFood" class="modal fade"  data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog custom-modal">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <h4 class="modal-title">Add Food</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+
+            <div class="form-group">
+              <label>Code</label> <input type="text" class="form-control" required ng-model="foodCode">
+            </div>
+
+            <div class="form-group">
+              <label>Name</label> <input type="text" class="form-control" required ng-model="foodName">
+            </div>
+            <div class="form-group">
+              <label>Price</label> <input type="number" class="form-control" required ng-model="foodPrice">
+            </div>
+            <div class="form-group">
+              <label>Status</label>
+              <select class="form-control"  disabled>
+                <option value="Đang bán" selected="selected">Đang bán</option>
+                <option value="Ngưng bán">Ngưng bán</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Category</label>
+              <select class="form-control"  ng-model="categoryID">
+                <option ng-repeat="category in categorys" value="{{category.categoryId}}">{{ category.categoryName }}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Picture</label>
+              <div class="custom-file">
+                <input required type="file" ng-model="foodPicture" class="custom-file-input" id="customFile" style="position: absolute; top: 0; left: 0; width: 225px; opacity: 0; padding: 14px 0; cursor: pointer;" onchange="angular.element(this).scope().setFile(this)">
+                <label for="customFile" style="display: block; padding: 6px 25px; background: #fff; border: 1px solid #d9d9d9; border-radius: 2px; color: #262626; font-size: 1em; transition: all .4s; cursor: pointer;">Choose a file: {{foodPicture}}</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="modal-footer">
+            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+            <input type="submit" class="btn btn-info" ng-click="createFood()" data-dismiss="modal" value="Add">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Modal HTML -->
+  <div id="editFood" class="modal fade"  data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog custom-modal">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <h4 class="modal-title">Edit Food</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="reloadPage()">&times;</button>
+          </div>
+          <div class="modal-body">
+
+            <div class="form-group">
+              <label>Code</label> <input type="text" class="form-control" required ng-model="food.foodCode">
+            </div>
+
+            <div class="form-group">
+              <label>Name</label> <input type="text" class="form-control" required ng-model="food.foodName">
+            </div>
+            <div class="form-group">
+              <label>Price</label> <input type="number" class="form-control" required ng-model="food.foodPrice">
+            </div>
+            <div class="form-group">
+              <label>Status</label>
+              <select class="form-control" id="selEditFoodStatus" required ng-model="food.foodStatus">
+                <option value="Đang bán">Đang bán</option>
+                <option value="Ngưng bán">Ngưng bán</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" id="selEditCategory" required ng-model="food.categoryID">
+                <option ng-repeat="category in categorys" ng-value={{category.categoryId}}>{{category.categoryName}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Picture</label>
+              <div class="custom-file">
+                <input required type="file" ng-model="food.foodPicture" class="custom-file-input" id="customFile"  style="position: absolute; top: 0; left: 0; width: 225px; opacity: 0; padding: 14px 0; cursor: pointer;" onchange="angular.element(this).scope().setFile(this)">
+                <label for="customFile" style="display: block; padding: 6px 25px; background: #fff; border: 1px solid #d9d9d9; border-radius: 2px; color: #262626; font-size: 1em; transition: all .4s; cursor: pointer;">Choose a file: {{food.foodPicture}}</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input type="button" ng-click="reloadPage()" class="btn btn-default" data-dismiss="modal" value="Cancel">
+            <input type="submit" ng-click="updateFood()" data-dismiss="modal" class="btn btn-info" value="Update">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- /#wrapper -->
+
+
+  <!-- The Modal add resource -->
+  <div class="modal fade" id="addResource" ng-controller="FoodDetailController">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-add-resource">
+      <img src="../images/food.png" height="50px" class="img-add-food-detail" title="close" data-dismiss="modal" />
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Thêm nguyên liệu</h4>
+          <div class="row row-title-add-resource">
+            <div class="col-sm-2 img-food">
+              <img ng-src="../images/{{food.foodPicture}}" alt="Food image" />
+            </div>
+            <div class="col-sm-8">
+              <div class="title-food-name">{{food.foodName}}</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <form class="was-validated" ng-submit="addAFoodDetail()">
+                <div class="form-group">
+                  <label for="resource-title-name">Nguyên liệu:</label><br>
+                  <select name="unit-resource" id="resource-title-name" required>
+                    <option ng-repeat="resource in resources" value="{{resource.resourceId}}">{{resource.resourceName}}</option>
+                  </select>
+
+                  <div class="row row-detail-res">
+                    <div class="col-sm-6">
+                      <label for="qualatitation">Số/Khối lượng:</label><br />
+                      <input type="number" class="form-control" id="qualatitation" value="1" min="1" name="qualatitation" required ng-model="foodDetails.qualatitation">
+
+                    </div>
+                    <div class="col-sm-6 unit-wrap">
+                      <label for="unit-resource">Đơn vị:</label><br />
+                      <select name="unit-resource" id="unit-resource" ng-model="foodDetails.unitId" required>
+                        <option ng-repeat="unit in units" ng-value="{{unit.unitId}}">{{unit.unitName}}</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <button type="submit" class="btn btn-primary" id="btnAddResource">Thêm</button>
+
+                </div>
+
+            </div>
+            <div class="col-sm-6  table-detail-food">
+              <table class="table" id="table-detail-food">
+                <thead class="fixedHeader">
+                  <tr>
+                    <th class="column-1-detab">STT</th>
+                    <th class="column-2-detab">Tên</th>
+                    <th class="column-3-detab">S/K lượng</th>
+                  </tr>
+                </thead>
+
+                <tbody class="my-custom-scrollbar table-wrapper-scroll-y">
+                  <tr ng-repeat="resourceSelected in foodDetailsSelected" class="row-detail" ng-click="record(resourceSelected,$index)">
+                    <td class="column-1-detab">{{$index + 1}}</td>
+                    <td class="column-2-detab">{{resourceSelected.resource.resourceName}}</td>
+                    <td class="column-3-detab">{{resourceSelected.quantitative}} {{resourceSelected.unit.unitName}}</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+            <button type="button" class="btn btn-danger" id="btn-delete-resource" ng-click="removeResourceDetail(resourceSelected.foodDetailId)">Xóa</button>
+          </div>
+        </div>
+      </div>
+      <img src="../images/vegetables-png.png" alt="Nguyên liệu" id="img-vegetables">
+    </div>
+
+  </div>
+
+
+  <!-- jQuery -->
+  <script src="../js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="../js/bootstrap.min.js"></script>
+
+  <!-- Metis Menu Plugin JavaScript -->
+  <script src="../js/metisMenu.min.js"></script>
+
+  <!-- DataTables JavaScript -->
+  <script src="../js/dataTables/jquery.dataTables.min.js"></script>
+  <script src="../js/dataTables/dataTables.bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script src="../js/startmin.js"></script>
+
+  <!--Code cua lam-->
+  <script type="text/javascript" src="../js/jquery-editable-select.min.js"></script>
+
+  <script type="text/javascript">
+    //upload file///
+    $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+    ///////////////
+
+    $('#add-resource-button').on("click", function() {
+      alert("Xin chao");
+      angular.element(document.querySelector('[ng-controller="FoodDetailController"]')).scope().openFoodDetail();
+    });
+
+    $('#resource-title-name').editableSelect().on('select.editable-select', function(e, li) {
+      angular.element(document.querySelector('[ng-controller="FoodDetailController"]')).scope().resource_id_selected = li.val();
+
+    });
+
+    $("button[type='button']#btn-delete-resource").prop('disabled', true);
+
+    $('div.table-detail-food').on("click", "#table-detail-food tbody > tr", function(e) {
+      $(this).addClass("row-selected").siblings().removeClass("row-selected");
+      $("button[type='button']#btn-delete-resource").removeAttr('disabled');
+    });
+  </script>
+  <script type="text/javascript" src="../app/app.js"></script>
+
+  <script type="text/javascript" src="../app/resource/foodDetailController.js"></script>
+
+
+</body>
+
+</html>
